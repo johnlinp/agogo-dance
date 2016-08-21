@@ -1,12 +1,46 @@
-#cover {
-    background: #b91810;
+body {
+    background: #fce1df;
+}
+
+#container {
+    position: relative;
+}
+
+.full {
+    position: absolute;
+    left: 0;
+    right: 0;
     width: 500px;
     max-width: 100%;
     height: 500px;
-    margin: 0 auto;
     margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-center-outer {
     display: flex;
     justify-content: center;
+}
+
+.vertical-center-inner {
+    align-self: center;
+}
+
+#envelope {
+    background: #83110b;
+}
+
+#receiver {
+    font-size: 4em;
+    line-height: 1em;
+    width: 1em;
+    font-family: "Ubuntu", "微軟正黑體";
+    cursor: default;
+}
+
+#cover {
+    background: #b91810;
 }
 
 #joy {
@@ -16,5 +50,4 @@
     height: 305px;
     margin: 0 auto;
     margin-top: 2%;
-    align-self: center;
 }
