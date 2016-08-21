@@ -31,23 +31,59 @@ body {
     background: #83110b;
 }
 
+#small-joy {
+    position: absolute;
+    background-image: url(../images/small-joy.svg);
+    background-repeat: no-repeat;
+    width: 97px;
+    height: 89px;
+    top: 3em;
+    left: 3em;
+}
+
+#sender {
+    color: #8c6b32;
+    font-size: 2em;
+    left: 1em;
+    bottom: 1em;
+}
+
+#lin {
+    position: absolute;
+    left: 3.5em;
+    bottom: 3em;
+}
+
+#tu {
+    position: absolute;
+    left: 1.5em;
+    bottom: 3em;
+}
+
+#seal {
+    position: absolute;
+    left: 2.5em;
+    bottom: 1.3em;
+}
+
 #receiver {
+    position: absolute;
     font-size: 4em;
     line-height: 1em;
     width: 1em;
     font-family: "Ubuntu", "微軟正黑體";
     cursor: default;
+    top: 1em;
+    right: 3em;
 }
 
 #cover {
     background: #b91810;
 }
 
-#joy {
-    background-image: url(../images/joy.svg);
+#big-joy {
+    background-image: url(../images/big-joy.svg);
     background-repeat: no-repeat;
     width: 305px;
     height: 305px;
-    margin: 0 auto;
-    margin-top: 2%;
 }
