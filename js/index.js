@@ -1,6 +1,6 @@
-var photoPageIdx = 0;
-
 (function() {
+    var photoPageIdx = 0;
+
     var putEnvelopeName = function() {
         var name = window.location.hash.substr(1);
         var receiver = document.getElementById('receiver');
