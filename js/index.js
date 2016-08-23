@@ -30,6 +30,7 @@
             var img = document.createElement('img');
 
             img.setAttribute('src', 'photo/' + photoIdx + '.jpg');
+            img.classList.add('wedding-photo');
             inner.classList.add('vertical-center-inner');
             photo.setAttribute('id', photoId);
             photo.classList.add('full');

@@ -229,6 +229,11 @@ body {
     color: #faf0f0;
 }
 
+.wedding-photo {
+    width: 100%;
+    max-width: 500px;
+}
+
 .front-animation {
     animation-name: front-keyframes;
     animation-duration: 0.8s;
