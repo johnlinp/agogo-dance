@@ -15,6 +15,7 @@
             'envelope',
             'cover',
             'invite',
+            'info',
         ];
 
         var setTransition = function(fromIdx, toIdx) {

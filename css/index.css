@@ -94,7 +94,7 @@ body {
     opacity: 0;
 }
 
-.invite-words {
+.red-words {
     width: 1em;
     position: absolute;
     line-height: 1em;
@@ -170,6 +170,51 @@ body {
 #bow {
     top: 17em;
     left: 5.2em;
+}
+
+#info {
+    background: #f8d275;
+    opacity: 0;
+}
+
+#info-block {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+}
+
+#hotel, #room, #address, #phone, #sit, #start {
+    font-size: 1.4em;
+}
+
+#hotel {
+    top: 2em;
+    right: 2em;
+}
+
+#room {
+    top: 5em;
+    right: 4em;
+}
+
+#address {
+    top: 5em;
+    right: 6em;
+}
+
+#phone {
+    top: 5em;
+    right: 8em;
+}
+
+#sit {
+    top: 2em;
+    right: 11em;
+}
+
+#start {
+    top: 5em;
+    right: 13em;
 }
 
 .front-animation {
