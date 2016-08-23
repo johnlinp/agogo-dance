@@ -29,6 +29,7 @@ body {
 
 #envelope {
     background: #83110b;
+    cursor: pointer;
 }
 
 #small-joy {
@@ -72,13 +73,13 @@ body {
     line-height: 1em;
     width: 1em;
     font-family: "Ubuntu", "微軟正黑體";
-    cursor: default;
     top: 1em;
     right: 3em;
 }
 
 #cover {
     background: #b91810;
+    visibility: hidden;
 }
 
 #big-joy {
@@ -86,4 +87,31 @@ body {
     background-repeat: no-repeat;
     width: 305px;
     height: 305px;
+}
+
+.front-animation {
+    animation-name: front-keyframes;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.back-animation {
+    animation-name: back-keyframes;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes front-keyframes {
+    from { transform:  scaleX(1.0); }
+    to { transform:  scaleX(0); }
+}
+
+@keyframes back-keyframes {
+    from { transform:  scaleX(0); visibility: visible; }
+    to { transform:  scaleX(1.0); visibility: visible; }
 }
