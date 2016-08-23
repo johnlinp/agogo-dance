@@ -29,6 +29,10 @@ body {
     align-self: center;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 #envelope {
     background: #83110b;
 }
@@ -79,7 +83,6 @@ body {
 
 #cover {
     background: #b91810;
-    opacity: 0;
 }
 
 #big-joy {
@@ -91,7 +94,6 @@ body {
 
 #invite {
     background: #f8d275;
-    opacity: 0;
 }
 
 .red-words {
@@ -174,7 +176,6 @@ body {
 
 #info {
     background: #f8d275;
-    opacity: 0;
 }
 
 #info-block {
@@ -219,7 +220,6 @@ body {
 
 #thanks {
     background: #b91810;
-    opacity: 0;
 }
 
 #ready {
@@ -252,6 +252,6 @@ body {
 }
 
 @keyframes back-keyframes {
-    from { transform:  scaleX(0); opacity: 1; }
-    to { transform:  scaleX(1.0); opacity: 1; }
+    from { transform:  scaleX(0); visibility: visible; }
+    to { transform:  scaleX(1.0); visibility: visible; }
 }
