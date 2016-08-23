@@ -16,6 +16,7 @@
             'cover',
             'invite',
             'info',
+            'thanks',
         ];
 
         var setTransition = function(fromIdx, toIdx) {

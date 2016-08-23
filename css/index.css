@@ -217,6 +217,18 @@ body {
     right: 13em;
 }
 
+#thanks {
+    background: #b91810;
+    opacity: 0;
+}
+
+#ready {
+    padding: 2em;
+    font-size: 2em;
+    line-height: 2em;
+    color: #faf0f0;
+}
+
 .front-animation {
     animation-name: front-keyframes;
     animation-duration: 0.8s;
