@@ -1,5 +1,6 @@
 body {
     background: #fce1df;
+    font-family: "Ubuntu", "微軟正黑體";
 }
 
 #container {
@@ -16,6 +17,7 @@ body {
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .vertical-center-outer {
@@ -29,7 +31,6 @@ body {
 
 #envelope {
     background: #83110b;
-    cursor: pointer;
 }
 
 #small-joy {
@@ -72,14 +73,13 @@ body {
     font-size: 4em;
     line-height: 1em;
     width: 1em;
-    font-family: "Ubuntu", "微軟正黑體";
     top: 1em;
     right: 3em;
 }
 
 #cover {
     background: #b91810;
-    visibility: hidden;
+    opacity: 0;
 }
 
 #big-joy {
@@ -87,6 +87,89 @@ body {
     background-repeat: no-repeat;
     width: 305px;
     height: 305px;
+}
+
+#invite {
+    background: #f8d275;
+    opacity: 0;
+}
+
+.invite-words {
+    width: 1em;
+    position: absolute;
+    line-height: 1em;
+    color: #93130c;
+}
+
+#welcome {
+    font-size: 2.5em;
+}
+
+#date, #for, #ceremony, #bow {
+    font-size: 1.5em;
+}
+
+#john, #margaret {
+    font-size: 1.2em;
+}
+
+#cslin, #moon, #stephen, #venus {
+    font-size: 1.4em;
+}
+
+#date {
+    top: 1em;
+    right: 2em;
+}
+
+#for {
+    top: 1em;
+    right: 4em;
+}
+
+#john {
+    top: 60px;
+    right: 85px;
+}
+
+#margaret {
+    top: 60px;
+    right: 115px;
+}
+
+#ceremony {
+    top: 7em;
+    right: 4em;
+}
+
+#welcome {
+    top: 1em;
+    left: 2.7em;
+}
+
+#cslin {
+    top: 12em;
+    left: 7em;
+}
+
+#moon {
+    top: 12em;
+    left: 6em;
+}
+
+#stephen {
+    top: 12em;
+    left: 5em;
+}
+
+#venus {
+    top: 12em;
+    left: 4em;
+}
+
+#bow {
+    top: 17em;
+    left: 5.2em;
 }
 
 .front-animation {
@@ -112,6 +195,6 @@ body {
 }
 
 @keyframes back-keyframes {
-    from { transform:  scaleX(0); visibility: visible; }
-    to { transform:  scaleX(1.0); visibility: visible; }
+    from { transform:  scaleX(0); opacity: 1; }
+    to { transform:  scaleX(1.0); opacity: 1; }
 }

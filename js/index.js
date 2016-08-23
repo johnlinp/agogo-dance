@@ -14,18 +14,28 @@
         var items = [
             'envelope',
             'cover',
+            'invite',
         ];
 
-        var setTransition = function(from, to) {
+        var setTransition = function(fromIdx, toIdx) {
+            var from = document.getElementById(items[fromIdx]);
+            var to = document.getElementById(items[toIdx]);
+
             from.addEventListener('click', function() {
                 from.classList.add('front-animation');
                 to.classList.add('back-animation');
+
+                if (toIdx < items.length - 1) {
+                    to.addEventListener('animationend', function() {
+                        to.style.opacity = 1;
+                        to.classList.remove('back-animation');
+                        setTransition(fromIdx + 1, toIdx + 1);
+                    });
+                }
             });
         };
 
-        var first = document.getElementById(items[0]);
-        var second = document.getElementById(items[1]);
-        setTransition(first, second);
+        setTransition(0, 1);
     };
 
     putEnvelopeName();
