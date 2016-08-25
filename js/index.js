@@ -4,12 +4,28 @@
     var putEnvelopeName = function() {
         var name = window.location.hash.substr(1);
         var receiver = document.getElementById('receiver');
+        var display;
+
+        receiver.style.width = '1em';
+        name = decodeURIComponent(name);
 
         if (name === '') {
-            name = '無名氏';
+            display = '來<br>個<br>#彩蛋<br>吧';
+            receiver.style.width = '3em';
+        } else if (name == '彩蛋') {
+            display = '想看彩蛋嗎';
+        } else if (name === '想') {
+            display = '真的嗎';
+        } else if (name === '真的') {
+            display = '出發囉';
+            setTimeout(function() {
+                window.location = 'https://www.youtube.com/watch?v=aPuJ9KH506I';
+            }, 1000);
+        } else {
+            display = name + '　收';
         }
 
-        receiver.innerHTML = decodeURIComponent(name) + '　收';
+        receiver.innerHTML = display;
     };
 
     var listenClick = function() {
@@ -80,4 +96,8 @@
 
     putEnvelopeName();
     listenClick();
+
+    window.addEventListener('hashchange', function() {
+        window.location.reload();
+    });
 })();
