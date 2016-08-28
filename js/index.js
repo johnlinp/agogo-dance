@@ -47,6 +47,7 @@
             photo.classList.add('full');
             photo.classList.add('hidden');
             photo.classList.add('vertical-center-outer');
+            photo.setAttribute('data-animation-type', 'photo');
 
             inner.appendChild(img);
             photo.appendChild(inner);
@@ -59,16 +60,32 @@
             var from = document.getElementById(items[fromIdx]);
             var to = document.getElementById(items[toIdx]);
 
-            from.addEventListener('click', function() {
-                from.classList.add('front-animation');
-                to.classList.add('back-animation');
+            var animationType = from.getAttribute('data-animation-type');
 
-                to.addEventListener('animationend', function() {
+            from.addEventListener('click', function() {
+                if (from.getAttribute('data-animating') == 'true' || to.getAttribute('data-animating') == 'true') {
+                    return;
+                }
+
+                from.setAttribute('data-animating', 'true');
+                to.setAttribute('data-animating', 'true');
+
+                from.classList.add(animationType + '-front-animation');
+                to.classList.add(animationType + '-back-animation');
+
+                to.addEventListener('animationend', function(evt) {
+                    if (evt.animationName.indexOf('back') == -1) {
+                        return;
+                    }
+
                     from.style.visibility = 'hidden';
                     to.style.visibility = 'visible';
 
-                    from.classList.remove('front-animation');
-                    to.classList.remove('back-animation');
+                    from.classList.remove(animationType + '-front-animation');
+                    to.classList.remove(animationType + '-back-animation');
+
+                    from.setAttribute('data-animating', 'false');
+                    to.setAttribute('data-animating', 'false');
                 });
             });
         };

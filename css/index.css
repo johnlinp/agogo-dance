@@ -234,29 +234,53 @@ body {
     max-width: 500px;
 }
 
-.front-animation {
-    animation-name: front-keyframes;
-    animation-duration: 0.8s;
+.page-front-animation {
+    animation-name: page-front-keyframes;
+    animation-duration: 0.4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
-.back-animation {
-    animation-name: back-keyframes;
-    animation-duration: 0.8s;
-    animation-delay: 0.8s;
+.page-back-animation {
+    animation-name: page-back-keyframes;
+    animation-duration: 0.4s;
+    animation-delay: 0.4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
 
-@keyframes front-keyframes {
+.photo-front-animation {
+    animation-name: photo-front-keyframes;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.photo-back-animation {
+    animation-name: photo-back-keyframes;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes page-front-keyframes {
     from { transform:  scaleX(1.0); }
     to { transform:  scaleX(0); }
 }
 
-@keyframes back-keyframes {
+@keyframes page-back-keyframes {
     from { transform:  scaleX(0); visibility: visible; }
     to { transform:  scaleX(1.0); visibility: visible; }
+}
+
+@keyframes photo-front-keyframes {
+    from { opacity: 1.0; }
+    to { opacity: 0; }
+}
+
+@keyframes photo-back-keyframes {
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1.0; visibility: visible; }
 }
