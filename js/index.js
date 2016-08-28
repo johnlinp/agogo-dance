@@ -1,5 +1,5 @@
 (function() {
-    var photoPageIdx = 0;
+    var NUM_PHOTO = 30;
 
     var putEnvelopeName = function() {
         var name = window.location.hash.substr(1);
@@ -33,9 +33,8 @@
             'thanks',
         ];
 
-        var createPhoto = function() {
-            var photoIdx = photoPageIdx % 30;
-            var photoId = 'photo-' + photoPageIdx;
+        var createPhoto = function(photoIdx) {
+            var photoId = 'photo-' + photoIdx;
             var container = document.getElementById('container');
             var photo = document.createElement('div');
             var inner = document.createElement('div');
@@ -53,8 +52,6 @@
             photo.appendChild(inner);
             container.appendChild(photo);
 
-            ++photoPageIdx;
-
             return photoId;
         };
 
@@ -63,10 +60,6 @@
             var to = document.getElementById(items[toIdx]);
 
             from.addEventListener('click', function() {
-                if (from.classList.contains('front-animation')) {
-                    return;
-                }
-
                 from.classList.add('front-animation');
                 to.classList.add('back-animation');
 
@@ -76,18 +69,19 @@
 
                     from.classList.remove('front-animation');
                     to.classList.remove('back-animation');
-
-                    if (toIdx == items.length - 1) {
-                        var photoId = createPhoto();
-                        items.push(photoId);
-                    }
-
-                    setTransition(toIdx, toIdx + 1);
                 });
             });
         };
 
-        setTransition(0, 1);
+        for (var photoIdx = 0; photoIdx < NUM_PHOTO; ++photoIdx) {
+            items.push(createPhoto(photoIdx));
+        }
+
+        for (var itemIdx = 0; itemIdx < items.length - 1; ++itemIdx) {
+            setTransition(itemIdx, itemIdx + 1);
+        }
+
+        setTransition(items.length - 1, 0);
     };
 
     putEnvelopeName();
